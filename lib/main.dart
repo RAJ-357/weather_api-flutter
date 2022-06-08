@@ -19,7 +19,7 @@ class WeatherApp extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<WeatherApp> {
-  int temp = 30;
+  double temp = 30;
   String weather = "Clear";
   int humidity = 10;
   int pressure = 1010;
@@ -35,10 +35,12 @@ class _MyHomePageState extends State<WeatherApp> {
 
     setState(() {
       weather = result["weather"][0]["main"];
-      temp = (result["main"]["temp"] - 273.15).round();
+      temp = (result["main"]["temp"] - 273.15);
+      temp = num.parse(temp.toStringAsFixed(1)) as double;
       pressure = result["main"]["pressure"].round();
       humidity = result["main"]["humidity"].round();
-      wind_speed = ((result["wind"]["speed"])*(18/5)).round();
+      wind_speed = ((result["wind"]["speed"])*(18/5));
+      wind_speed = num.parse(temp.toStringAsFixed(1)) as double;
       icon_url = "${"http://openweathermap.org/img/w/" + result["weather"][0]["icon"]}.png";
     });
   }
