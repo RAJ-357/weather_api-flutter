@@ -25,7 +25,7 @@ class _MyHomePageState extends State<WeatherApp> {
   int pressure = 1010;
   double wind_speed = 5;
   String city = "Sample City";
-  String app_id = '0f18418e5cb305bf3d9d678fb49c5e26';
+  String app_id = 'YOUR_API_KEY';
   String icon_url = "http://openweathermap.org/img/w/03n.png";
   String city_api_url = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
@@ -266,17 +266,3 @@ class _MyHomePageState extends State<WeatherApp> {
     );
   }
 }
-
-//final url = Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=Bengaluru&appid=0f18418e5cb305bf3d9d678fb49c5e26');
-
-/*
-//print(jsonDecode(response.body)["weather"][0]["description"]
-{coord: {lon: 77.6033, lat: 12.9762},
-weather: [{id: 802, main: Clouds, description: scattered clouds, icon: 03n}],
-base: stations,
-main: {temp: 292.95, feels_like: 293.6, temp_min: 292.95, temp_max: 296.05, pressure: 1012, humidity: 100},
-visibility: 6000,
-wind: {speed: 1.03, deg: 250}, clouds: {all: 40},
-dt: 1654540502,
-sys: {type: 1, id: 9205, country: IN, sunrise: 1654561359, sunset: 1654607664},
-timezone: 19800, id: 1277333, name: Bengaluru, cod: 200}*/
